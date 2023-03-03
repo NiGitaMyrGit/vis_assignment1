@@ -9,11 +9,9 @@ import fnmatch
 flower_dir = os.path.join("assignment1-simple-image-search-NiGitaMyrGit", "data", "flowers")
 
 # Set the target image
-target_filename = os.path.join(flower_dir, "image_1305.jpg")
+target_filename = os.path.join("assignment1-simple-image-search-NiGitaMyrGit", "data", "flowers", "image_1305.jpg")
 target_image = cv2.imread(target_filename)
-
-
-# Calculate the histogram of the target image
+#calculating the histogram for the target image
 target_hist = cv2.calcHist([target_image], [0, 1, 2], None, [256, 256, 256], [0, 256, 0, 256, 0, 256])
 
 # Create a list to store the distances between the target histogram and each image histogram
@@ -24,6 +22,8 @@ for filename in os.listdir(flower_dir):
     # Check if the filename is the same as the target filename
     if filename == os.path.basename(target_filename):
         continue  # skip this image and continue with the next one
+    if not fnmatch.fnmatch(filename, "*.jpg"):
+        continue
     # Read the image
     image = cv2.imread(os.path.join(flower_dir, filename))
     # Calculate the histogram of the image
@@ -31,7 +31,8 @@ for filename in os.listdir(flower_dir):
     
     # Calculate the distance between the target histogram and the image histogram
     # using the Bhattacharyya distance
-    # The Bhattacharyya distance is the 
+    # using Bhattacharyya distance, in order to measure the “overlap” between the two histograms:
+    # https://pyimagesearch.com/2014/07/14/3-ways-compare-histograms-using-opencv-python/
     distance= cv2.compareHist(target_hist, hist, cv2.HISTCMP_BHATTACHARYYA)
     
     # Add the filename and distance to the distances list
