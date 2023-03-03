@@ -3,6 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
+import fnmatch
 
 # Set the main directory 'flower_dir' where the files are located
 flower_dir = os.path.join("assignment1-simple-image-search-NiGitaMyrGit", "data", "flowers")
