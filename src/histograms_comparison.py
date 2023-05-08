@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.append("..")
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -6,10 +8,10 @@ import csv
 import fnmatch
 
 # Set the main directory 'flower_dir' where the files are located
-flower_dir = os.path.join("assignment1-simple-image-search-NiGitaMyrGit", "data", "flowers")
+flower_dir = os.path.join("data", "flowers")
 
 # Set the target image
-target_filename = os.path.join("assignment1-simple-image-search-NiGitaMyrGit", "data", "flowers", "image_1305.jpg")
+target_filename = os.path.join("data", "flowers", "image_1305.jpg")
 target_image = cv2.imread(target_filename)
 #calculating the histogram for the target image
 target_hist = cv2.calcHist([target_image], [0, 1, 2], None, [256, 256, 256], [0, 256, 0, 256, 0, 256])
