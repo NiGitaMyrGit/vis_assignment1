@@ -1,4 +1,4 @@
-Preliminaries:
+## Preliminaries:
 in the command line make sure you are located in the main folder. From here start by running bash setup.sh
 afterwards direct to the folder "in" (by using cd in/) and unzip the dataset by running "unzip flowers.zip"
 
