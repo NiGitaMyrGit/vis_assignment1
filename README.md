@@ -8,7 +8,7 @@ something about lambda functions and very basic lambda calculus:
 https://stackoverflow.com/questions/8966538/syntax-behind-sortedkey-lambda
 https://www.youtube.com/watch?v=d0yEXKas8xE
 
-## 2. Assignment description
+## 2. Initial assignment description
 For this assignment, you'll be using OpenCV to design a simple image search algorithm.
 The dataset is a collection of over 1000 images of flowers, sampled from 17 different species. The dataset comes from the Visual Geometry Group at the University of Oxford, and full details of the data can be found here.
 For this exercise, you should write some code which does the following:
@@ -26,36 +26,24 @@ Save a CSV file to the folder called out, showing the five most similar images a
 |filename1|---|
 |filename2|---|
 
-### Additional comments
+### 2.1 Additional comments
 Your code should include functions that you have written wherever possible. Try to break your code down into smaller self-contained parts, rather than having it as one long set of instructions.
 For this assignment, you are welcome to submit your code either as a Jupyter Notebook, or as .py script. If you do not know how to write .py scripts, don't worry - we're working towards that!
 Lastly, you are welcome to edit this README file to contain whatever information you like. Remember - documentation is important!
 
-### Objective
+### 2.2 Objective
 This assignment is designed to test that you can:
 - Work with larger datasets of images
 - Extract structured information from image data using OpenCV
 - Quantaitively compare images based on these features, performing distant viewing
-### Some notes
+### 2.3 Some notes
 You'll need to first unzip the flowers before you can use the data!
 
-### Additional comments 
-This assignment is designed to test that you can:
-Work with larger datasets of images
-Extract structured information from image data using OpenCV
-Quantaitively compare images based on these features, performing distant viewing
-Some notes
-You'll need to first unzip the flowers before you can use the data!
-Additional comments
-Your code should include functions that you have written wherever possible. Try to break your code down into smaller self-contained parts, rather than having it as one long set of instructions.
-For this assignment, you are welcome to submit your code either as a Jupyter Notebook, or as .py script. If you do not know how to write .py scripts, don't worry - we're working towards that!
-Lastly, you are welcome to edit this README file to contain whatever information you like. Remember - documentation is important!
 
 
-
-
+## 3. Methods
 The code in the python script '''histograms_comparison.py''' does the following:
-
+This assignment is using ```OpenCV``` to design a simple image search algorithm.
 - Define a particular image thar will be worked with. I have chosen image_1305.jpg, but this can be changed
 - For that image
   - Extracts the colour histogram using ```OpenCV```
@@ -65,18 +53,6 @@ The code in the python script '''histograms_comparison.py''' does the following:
   - the distance between the target image's histogram and all other histograms is calculated by using the Bhattacharyya distance. This ditance 
 - Finds the five images which are most simlar to the target image
   - Saves a CSV file to the folder called ```out```, showing the five most similar images and the distance metric:
-
-
-### 2.2 Objective
-
-This assignment is designed to test the ability to:
-
-1. Working with larger datasets of images
-2. Extract structured information from image data using ```OpenCV```
-3. Quantaitively compare images based on these features, performing *distant viewing*
-
-## 3. Methods
-This assignment is using ```OpenCV``` to design a simple image search algorithm.
 
 ## 4. Usage
 ### 4.1 extract data
