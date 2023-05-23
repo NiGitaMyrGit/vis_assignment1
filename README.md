@@ -63,6 +63,3 @@ Still located in the main folder run the script with the command `python3 src\hi
 The CSV-file in the folder `out` contains a data-table with the top-5 most similiar images with the bin-count set to 16. The first image in the file is the target_image itself, which logically has the accuracy of 0.0
 I tried meddling with the bin count to get a higher accuracy-rate. Initially I tried with 256, but it gave me better results to go lower. 16 bins ended up giving me the highest accuracy rate. With my human eyes I must admit I cannot tell apart how similiar each image is or not, except for image_1322.jpg which is the closest to the target_image with an accuracy score of 0.21808996400965. This makes sense, since the image is the same, with the only difference being that image_1322.jpg has a logo placed on top of it.
 
-## 6. OBS
-I have been troubled with open-cv problems. sometimes it seems to work, sometimes not, at random. It seems to be a common problem, but I have not been able to figure out how to fix it. I hope the script will work :(
-I guess this is why a virtual environment would have been smart to set up.
