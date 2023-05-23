@@ -46,7 +46,7 @@ Uses```OpenCV``` to design a simple image search algorithm. The script produces 
 This calculates the distance between the target image's histogram and all other histograms by using the Bhattacharyya distance. The top five images most similar to the target image are stored as a CSV-file in the folder called ```out```alongside the distance metric.
 
 ## 4. Usage
-This script was made using python 3.10, make sure this is your python version you run the script in. 
+This script was made using python 3.10.7, make sure this is your python version you run the script in. 
 ### 4.1 Installing packages
 From the command line:
 Clone this repository to your console by running the command `git clone https://github.com/NiGitaMyrGit/vis_assignment1.git`. This will copy the repository to the location you are currently in.
@@ -62,3 +62,5 @@ Still located in the main folder run the script with the command `python3 src\hi
 The CSV-file in the folder `out` contains a data-table with the top-5 most similiar images with the bin-count set to 16. The first image in the file is the target_image itself, which logically has the accuracy of 0.0
 I tried meddling with the bin count to get a higher accuracy-rate. Initially I tried with 256, but it gave me better results to go lower. 16 bins ended up giving me the highest accuracy rate. With my human eyes I must admit I cannot tell apart how similiar each image is or not, except for image_1322.jpg which is the closest to the target_image with an accuracy score of 0.21808996400965. This makes sense, since the image is the same, with the only difference being that image_1322.jpg has a logo placed on top of it.
 
+## 6. OBS
+I have been troubled with open-cv problems. sometimes it seems to work, sometimes not, at random. It seems to be a common problem, but I have not been able to figure out how to fix it. I hope the script will work :(
