@@ -13,7 +13,7 @@ def make_histograms():
     # Set the target image
     target_image = cv2.imread(target_filename)
     #calculating the histogram for the target image
-    target_hist = cv2.calcHist([target_image], [0, 1, 2], None, [32, 32, 32], [0, 32, 0, 32, 0, 32])
+    target_hist = cv2.calcHist([target_image], [0, 1, 2], None, [16, 16, 16], [0, 256, 0, 256, 0, 256])
     # Create a list to store the distances between the target histogram and each image histogram
     distances = []
     # Loop over every image in the flower_dir and calculate the histogram
@@ -23,7 +23,7 @@ def make_histograms():
         # Read the image
         image = cv2.imread(os.path.join(flower_dir, filename))
         # Calculate the histogram of the image
-        hist = cv2.calcHist([image], [0, 1, 2], None, [32, 32, 32], [0, 32, 0, 32, 0, 32])
+        hist = cv2.calcHist([image], [0, 1, 2], None, [16, 16, 16], [0, 256, 0, 256, 0, 256])
         
         # Calculate the distance between the target histogram and the image histogram
         # using Bhattacharyya distance, in order to measure the “overlap” between the two histograms:
@@ -33,32 +33,18 @@ def make_histograms():
         distances.append((filename, distance))
     # Sort the distances list by distance in ascending order
     distances.sort(key=lambda x: x[1])
-    return distance, distances
-print("starting the topfive")
-
-def top_five(distance, distances):
     # Create a list to store the top 5 images
     top_5 = []
     # Loop over the 5 images with the smallest distance and add them to the top 5 list
     for i in range(6):
         filename, distance = distances[i]
         top_5.append((filename, distance))
-    with open(os.path.join("out", "similar_images_32.csv"), "w", newline="") as csvfile:
+    with open(os.path.join("out", "similar_images_bins16.csv"), "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(["Filename", "Distance"])
         for item in top_5:
             writer.writerow(item)
-
-
-print("let's hope it works")
-def main():
-    # load data and make histograms
-    distance, distances = make_histograms()
-    # top-5-list
-    top_five(distance, distances)
-    # Save the top 5 list to a CSV file
-    
-
+        
 # calling main function
 if __name__== "__main__":
-    main()
+    make_histograms()
