@@ -57,7 +57,7 @@ direct to the folder ```in``` by using  the comman `cd in`(if located  and unzip
 The dataset is a collection of over 1000 images of flowers, sampled from 17 different species. The dataset comes from the Visual Geometry Group at the University of Oxford, and full details of the data can be found [here](https://www.robots.ox.ac.uk/~vgg/data/flowers/17/).
 
 ### 4.3
-Still located in the main folder run the script with the command `python3 src\
+Still located in the main folder run the script with the command `python3 src\histograms_comparison.py`
 ## 5. Results - discussion
 The CSV-file in the folder `out` contains a data-table with the top-5 most similiar images with the bin-count set to 16. The first image in the file is the target_image itself, which logically has the accuracy of 0.0
 I tried meddling with the bin count to get a higher accuracy-rate. Initially I tried with 256, but it gave me better results to go lower. 16 bins ended up giving me the highest accuracy rate. With my human eyes I must admit I cannot tell apart how similiar each image is or not, except for image_1322.jpg which is the closest to the target_image with an accuracy score of 0.21808996400965. This makes sense, since the image is the same, with the only difference being that image_1322.jpg has a logo placed on top of it.
