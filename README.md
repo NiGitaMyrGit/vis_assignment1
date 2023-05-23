@@ -1,8 +1,8 @@
 # Building a simple image search algorithm
 The portfolio exam for **Visual Analytics S22** consists of 4 projects; three class assignments and one self-assigned project. This is the repository for the **first assignment** in the portfolio.
 ## 1. Contributions
-The code was produced by me.
-**Help sources**:
+The code was produced by me, but with a lot of problem-solving looking into various Stack Overflow blog posts.
+**Mention worthy help sources**:
 *Bhattacharyya distance*: https://pyimagesearch.com/2014/07/14/3-ways-compare-histograms-using-opencv-python/
 *fnmatch*: https://docs.python.org/3/library/fnmatch.html
 *lambda functions* and very basic lambda calculus:
