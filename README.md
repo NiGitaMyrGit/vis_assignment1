@@ -1,6 +1,7 @@
 # Building a simple image search algorithm
 The portfolio exam for **Visual Analytics S22** consists of 4 projects; three class assignments and one self-assigned project. This is the repository for the **first assignment** in the portfolio.
 ## 1. Contributions
+The code was produced by me.
 **Help sources**:
 *Bhattacharyya distance*: https://pyimagesearch.com/2014/07/14/3-ways-compare-histograms-using-opencv-python/
 *fnmatch*: https://docs.python.org/3/library/fnmatch.html
@@ -64,3 +65,4 @@ I tried meddling with the bin count to get a higher accuracy-rate. Initially I t
 
 ## 6. OBS
 I have been troubled with open-cv problems. sometimes it seems to work, sometimes not, at random. It seems to be a common problem, but I have not been able to figure out how to fix it. I hope the script will work :(
+I guess this is why a virtual environment would have been smart to set up.
