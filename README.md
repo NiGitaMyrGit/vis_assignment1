@@ -57,7 +57,7 @@ Then make sure you are located in the main folder, location can be changed by us
 direct to the folder ```in``` by using  the comman `cd in`(if located  and unzip the dataset by running "unzip flowers.zip"
 The dataset is a collection of over 1000 images of flowers, sampled from 17 different species. The dataset comes from the Visual Geometry Group at the University of Oxford, and full details of the data can be found [here](https://www.robots.ox.ac.uk/~vgg/data/flowers/17/).
 
-### 4.3
+### 4.3 run the script
 Still located in the main folder run the script with the command `python3 src\histograms_comparison.py`
 ## 5. Results - discussion
 The CSV-file in the folder `out` contains a data-table with the top-5 most similiar images with the bin-count set to 16. The first image in the file is the target_image itself, which logically has the accuracy of 0.0
